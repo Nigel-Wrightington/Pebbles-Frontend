@@ -7,13 +7,17 @@ export default function Navbar() {
   return (
     <header id="navbar">
       <NavLink id="brand" to="/">
-        <p>Pebbles Homepage</p>
+        <p>Home</p>
       </NavLink>
+      <NavLink to="/Contact">Contact</NavLink>
       <nav>
         {token ? (
           <button onClick={logout}>Log out</button>
         ) : (
-          <NavLink to="/login">Log in</NavLink>
+          <>
+            <NavLink to="/login">Log in</NavLink>
+            <NavLink to="/Contact">Contact</NavLink>
+          </>
         )}
       </nav>
     </header>
